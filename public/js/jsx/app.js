@@ -1,13 +1,11 @@
-define(function(require){
-
-  var React = require('react');
+define(['react'], function(React) {
 
   function App() {
     this.AppView = React.createClass({
       render: function () {
         return (
           <div>
-            <p>Hello, React!</p>
+            <p>Welcome to Virtual Class!</p>
           </div>
         );
       }

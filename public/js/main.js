@@ -1,15 +1,10 @@
 require.config({
     "baseUrl": "/public/js",
     "paths": {
-        "react": "react",
-        "jquery": "jquery",
-        "jsx": "JSXTransformer"
+        "react"     : "react",
+        "jquery"    : "jquery"
     },
     shim: {
-        "JSXTransformer": {
-            deps: ['react'],
-            exports: 'JSXTransformer'
-        },
         "react": {
             exports: 'React'
         }
