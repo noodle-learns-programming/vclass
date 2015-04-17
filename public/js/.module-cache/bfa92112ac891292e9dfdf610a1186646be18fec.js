@@ -1,4 +1,4 @@
-define(['react', 'build/class'], function(React, Class) {
+define(['react'], function(React) {
 
   function App() {
     this.AppView = React.createClass({displayName: "AppView",
