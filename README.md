@@ -1,2 +1,2 @@
 # vclass
-# jsx public/js/ public/js/
+# jsx --watch public/js/jsx/ public/js/build/
