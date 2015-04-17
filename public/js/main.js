@@ -2,15 +2,19 @@ require.config({
     "baseUrl": "/public/js",
     "paths": {
         "react"     : "react",
-        "jquery"    : "jquery"
+        "jquery"    : "jquery",
+        "io"        : "socket.io"
     },
     shim: {
         "react": {
             exports: 'React'
+        },
+        'io': {
+            exports: 'io'
         }
     }
 });
-require(['build/app'], function (App) {
+require(['app'], function (App) {
     var app = new App();
-    app.init();
+    app.run();
 });
