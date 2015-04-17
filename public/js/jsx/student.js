@@ -2,9 +2,9 @@ define(['react'], function(React) {
 Student = React.createClass({
 	render: function () {
 		return (
-			<div>
-				<h1>Students name</h1>
-			</div>
+			<li>
+				<h1>{this.props.data.name}</h1>
+			</li>
 		);
 	}
 });
