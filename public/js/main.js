@@ -9,19 +9,21 @@ require.config({
     },
     shim: {
         "react": {
-            exports: 'React'
+            exports : 'React'
         },
         'io': {
-            exports: 'io'
+            exports : 'io'
+        },
+        'foundation' : {
+            deps    : ['modernizr']
         }
     }
 });
-require(['modernizr', 'jquery', 'foundation'], function(modernizr, jQuery, foundation)
+require(['foundation'], function()
 {
     $(document).foundation();
 });
 require(['app', 'config/config'], function (App, Config) {
-    console.log(Config);
     var app = new App(Config);
     app.bootstrap()
        .run();
