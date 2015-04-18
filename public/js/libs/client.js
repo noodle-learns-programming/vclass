@@ -19,7 +19,7 @@ Client.prototype.onConnected = function()
 
 Client.prototype.onDisconnected = function()
 {
-    console.log('disconnected')
+    console.log('disconnected');
 };
 
 return Client;
