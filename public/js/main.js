@@ -14,7 +14,9 @@ require.config({
         }
     }
 });
-require(['app'], function (App) {
-    var app = new App();
-    app.run();
+require(['app', 'config/config'], function (App, Config) {
+    console.log(Config);
+    var app = new App(Config);
+    app.bootstrap()
+       .run();
 });
