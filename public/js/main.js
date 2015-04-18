@@ -24,7 +24,8 @@ require(['foundation'], function()
     $(document).foundation();
 });
 require(['app', 'config/config'], function (App, Config) {
-    var app = new App(Config);
+    var app     = new App(Config);
+    window.app  = app;
     app.bootstrap()
        .run();
 });

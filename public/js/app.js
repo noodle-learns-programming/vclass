@@ -2,6 +2,7 @@ define(['react', 'build/layout', 'libs/client'], function(React, Layout, Client)
 
 var App = function(config){
     this.setConfig(config);
+    this.init();
 };
 
 App.prototype.run = function()
@@ -13,12 +14,12 @@ App.prototype.run = function()
 };
 
 App.prototype.init = function () {
-
+    this.resources = {};
 };
 
 App.prototype.bootstrapResourceClient = function()
 {
-    this.client = new Client(
+    this.resources['client'] = new Client(
         this.getConfig().getSocketUrl()
     );
 };
@@ -43,6 +44,11 @@ App.prototype.postDispatch = function()
         this.layout,
         document.body
     );
+};
+
+App.prototype.getResource = function(key)
+{
+    return this.resources[key];
 };
 
 App.prototype.setConfig = function(config)
