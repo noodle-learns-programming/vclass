@@ -41,7 +41,7 @@ App.prototype.postDispatch = function()
 {
     React.render(
         this.layout,
-        document.getElementById('root')
+        document.body
     );
 };
 

@@ -3,7 +3,9 @@ Student = React.createClass({
 	render: function () {
 		return (
 			<li>
-				<h1>{this.props.data.name}</h1>
+				<div className="room-table">
+					<span className="label">{this.props.data.name}</span>
+				</div>
 			</li>
 		);
 	}

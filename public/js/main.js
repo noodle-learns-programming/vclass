@@ -1,9 +1,11 @@
 require.config({
     "baseUrl": "/public/js",
     "paths": {
-        "react"     : "react",
-        "jquery"    : "jquery",
-        "io"        : "socket.io"
+        "react"         : "react",
+        "jquery"        : "jquery",
+        "io"            : "socket.io",
+        "foundation"    : "foundation.min",
+        "modernizr"     : "vendor/modernizr"
     },
     shim: {
         "react": {
@@ -13,6 +15,10 @@ require.config({
             exports: 'io'
         }
     }
+});
+require(['modernizr', 'jquery', 'foundation'], function(modernizr, jQuery, foundation)
+{
+    $(document).foundation();
 });
 require(['app', 'config/config'], function (App, Config) {
     console.log(Config);

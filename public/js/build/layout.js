@@ -1,4 +1,4 @@
-define(['react', 'build/class'], function(React, Class) {
+define(['react', 'build/room'], function(React, Room) {
 
 var students = [{
     'id'    : 1,
@@ -11,7 +11,23 @@ var students = [{
 var Layout    = React.createClass({displayName: "Layout",
     render: function () {
         return (
-            React.createElement(Class, {students: students})
+        	React.createElement("div", null, 
+	        	React.createElement("div", {className: "row"}, 
+	        		React.createElement("div", {className: "large-12 columns"}, 
+						React.createElement("div", {className: "panel"}, 
+							React.createElement("h1", null, "Welcome to vClass version @0.1")
+						)
+					)
+				), 
+				React.createElement("div", {className: "row"}, 
+					React.createElement("div", {className: "large-9 columns"}, 
+						React.createElement(Room, {students: students})
+					), 
+					React.createElement("div", {className: "large-3 columns"}, 
+						React.createElement("div", {className: "panel"}, "Messenger")
+					)
+				)
+			)
         );
     }
 });

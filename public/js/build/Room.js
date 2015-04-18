@@ -1,5 +1,5 @@
 define(['react', 'build/student'], function(React, Student) {
-Class = React.createClass({displayName: "Class",
+Room = React.createClass({displayName: "Room",
     getInitialState: function() {
         return {};
     },
@@ -13,5 +13,5 @@ Class = React.createClass({displayName: "Class",
         );
     }
 });
-return Class;
+return Room;
 });

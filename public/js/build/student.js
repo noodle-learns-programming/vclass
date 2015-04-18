@@ -3,7 +3,9 @@ Student = React.createClass({displayName: "Student",
 	render: function () {
 		return (
 			React.createElement("li", null, 
-				React.createElement("h1", null, this.props.data.name)
+				React.createElement("div", {className: "room-table"}, 
+					React.createElement("span", {className: "label"}, this.props.data.name)
+				)
 			)
 		);
 	}
