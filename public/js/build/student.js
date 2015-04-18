@@ -1,5 +1,5 @@
 define(['react'], function(React) {
-Student = React.createClass({displayName: "Student",
+var Student = React.createClass({displayName: "Student",
 	render: function () {
 		return (
 			React.createElement("li", null, 

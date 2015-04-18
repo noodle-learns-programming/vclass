@@ -1,5 +1,5 @@
 define(['react', 'build/student'], function(React, Student) {
-Room = React.createClass({
+var Room = React.createClass({
     getInitialState: function() {
         return {};
     },

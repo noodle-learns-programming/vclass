@@ -1,5 +1,5 @@
 define(['react'], function(React) {
-Student = React.createClass({
+var Student = React.createClass({
 	render: function () {
 		return (
 			<li>

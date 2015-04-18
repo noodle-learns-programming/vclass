@@ -1,4 +1,4 @@
-define(['react', 'build/room'], function(React, Room) {
+define(['react', 'build/room', 'build/messenger'], function(React, Room, Messenger) {
 
 var students = [{
     'id'    : 1,
@@ -25,6 +25,7 @@ var Layout    = React.createClass({
 					</div>
 					<div className="large-3 columns">
 						<div className="panel">Messenger</div>
+						<Messenger />
 					</div>
 				</div>
 			</div>
